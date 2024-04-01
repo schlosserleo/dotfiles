@@ -41,7 +41,7 @@ exec ulauncher --hide-window
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
-#
+
 # Example configuration:
 #
 # exec swayidle -w \
@@ -233,7 +233,7 @@ bindsym $mod+r mode "resize"
 
 set $transparent #00000000
 # class                 border  backgr. text    indicator child_border
-client.focused           #fabd2f #fabd2f #fabd2f #fabd2f #fabd2f
+client.focused           #66a5ad #66a5ad #66a5ad #66a5ad #66a5ad
 client.unfocused        $transparent $transparent $transparent $transparent $transparent
 client.focused_inactive $transparent $transparent $transparent $transparent $transparent
 
