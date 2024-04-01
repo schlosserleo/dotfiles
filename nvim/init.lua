@@ -588,7 +588,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
-
+        biome = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -626,6 +626,11 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
         'prettier',
         'prettierd',
+        'fixjson',
+        'biome',
+        'clang-format',
+        'jq',
+        'jsonnetfmt',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -662,6 +667,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black', 'flake8' },
+        json = { 'fixjson', 'prettier', 'prettierd', 'fixjson', 'biome', 'clang-format', 'jq', 'jsonnetfmt' },
         ['_'] = { 'prettierd', 'prettier' },
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.

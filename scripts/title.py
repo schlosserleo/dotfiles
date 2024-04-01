@@ -1,4 +1,7 @@
 import subprocess
+from os import path as p
+
+HOMEDIR = p.expanduser("~")
 
 SECOND_LINE_MPC = "mpc -f %title% | tail -n 2 | head -n 1"
 FIRST_LINE_MPC = "mpc -f %title% | head -n 1"
@@ -41,7 +44,7 @@ def main():
         print("No Music | Right-Click to Play")
         return
 
-    statefile = open("$HOME/.config/scripts/mpytstate", "r")
+    statefile = open(HOMEDIR + "/.config/scripts/mpytstate", "r")
     if get_mpc_title() != "":
         title = filter_umlauts(get_mpc_title())
         print(
