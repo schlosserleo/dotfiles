@@ -41,7 +41,7 @@ def main():
         print("No Music | Right-Click to Play")
         return
 
-    statefile = open("/home/leo/scripts/mpytstate", "r")
+    statefile = open("$HOME/.config/scripts/mpytstate", "r")
     if get_mpc_title() != "":
         title = filter_umlauts(get_mpc_title())
         print(

@@ -162,7 +162,7 @@
     "format": "{}",
     //"max-length": 15,
     "interval": 1, 
-    "exec": "python $HOME/scripts/title.py", 
+    "exec": "python $HOME/.config/scripts/title.py", 
     "exec-if": "pgrep mpd",
     "on-click": "mpc toggle",
     "on-click-right": "mpdevil"
