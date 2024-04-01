@@ -1,11 +1,23 @@
 return {
-  'nvim-neo-tree/neo-tree.nvim',
+  'nvim-tree/nvim-tree.lua',
+
   dependencies = {
-    'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons',
-    'MunifTanjim/nui.nvim',
   },
   config = function()
-    require('neo-tree').setup {}
+    require('nvim-tree').setup {
+      sort = {
+        sorter = 'case_sensitive',
+      },
+      view = {
+        width = 30,
+      },
+      renderer = {
+        group_empty = true,
+      },
+      filters = {
+        dotfiles = false,
+      },
+    }
   end,
 }
