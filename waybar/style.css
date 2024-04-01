@@ -1,0 +1,286 @@
+* { 
+    font-family: CaskaydiaCove Nerd Font Propo;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #0F191F;
+    background-color: #0F191F;
+    border-bottom: 3px solid #C6D5CF;
+    color: #C6D5CF;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+window#waybar.empty {
+    background-color: #0F191F;
+}
+window#waybar.solo {
+    background-color: #0F191F;
+}
+
+
+button {
+    box-shadow: inset 0 -3px transparent; 
+    border: none;
+    border-radius: 0;
+}
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #C6D5CF;
+}
+
+#workspaces button {
+    padding: 0px 3px 0px 3px;
+    background-color: transparent;
+    color: #C6D5CF;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #66A5AD;
+    box-shadow: inset 0 -3px #C6D5CF;
+}
+
+#workspaces button.urgent {
+    background-color: #66A5AD;
+}
+
+#mode {
+    background-color: #0F191F;
+    border-bottom: 3px solid #C6D5CF;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#clock,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#custom-mpd,
+#mpd {
+    padding: 0 12px 0 8px;
+    border-bottom: 3px solid #C6D5CF;
+    border-right: 1px solid #C6D5CF;
+    color: #C6D5CF;
+}
+#custom-mpd{
+  border-right: none;
+}
+#workspaces {
+    margin: 0 4px;
+}
+ 
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+#pulseaudio {
+    border-left: 1px solid #C6D5CF;
+}
+#battery {
+    padding-right: 14px;
+}
+
+#clock {
+    background-color: #66A5AD;
+    border-bottom: 3px solid #C6D5CF;
+    border-right: none;
+}
+/*
+#battery {
+    background-color: #fe8019;
+    color: #0F191F;
+}
+
+#battery.charging, #battery.plugged {
+    color: #C6D5CF;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #C6D5CF;
+        color: #0F191F;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #C6D5CF;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #0F191F;
+}
+
+#cpu {
+    background-color: #cc241d;
+    color: #0F191F;
+}
+
+#memory {
+    background-color: #d79921;
+}
+
+#disk {
+    background-color: #964B00;
+}
+
+#backlight {
+    background-color: #90b1b1;
+}
+
+#network {
+    background-color: #b8bb26;
+    padding-right: 18px;
+    padding-left: 10px;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#pulseaudio {
+    background-color: #d65d0e;
+    color: #0F191F;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+#battery {
+  padding-right: 18px;
+  padding-left: 10px; 
+}
+#wireplumber {
+    background-color: #fff0f5;
+    color: #0F191F;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+
+#custom-media {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#temperature {
+    background-color: #f0932b;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#tray {
+    background-color: #458588;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #0F191F;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+*/
