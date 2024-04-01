@@ -619,6 +619,8 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'debugpy',
         'black', -- Used to format python code
+        'isort',
+        'flake8',
         'mypy', -- Static type checking python
         'ruff',
         'stylua', -- Used to format Lua code
@@ -657,7 +659,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'black' },
+        python = { 'isort', 'black', 'flake8' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
