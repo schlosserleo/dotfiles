@@ -116,7 +116,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $maincolor
+set $maincolor #66a5ad
 set $transparent #00000000
 
 client.focused		$maincolor	$maincolor	$maincolor	$maincolor	$maincolor
