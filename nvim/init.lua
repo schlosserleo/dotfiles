@@ -624,6 +624,8 @@ require('lazy').setup({
         'mypy', -- Static type checking python
         'ruff',
         'stylua', -- Used to format Lua code
+        'prettier',
+        'prettierd',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -660,7 +662,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black', 'flake8' },
-        --
+        ['_'] = { 'prettierd', 'prettier' },
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         -- javascript = { { "prettierd", "prettier" } },
