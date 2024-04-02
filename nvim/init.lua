@@ -589,6 +589,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        marksman = {},
         biome = {},
         lua_ls = {
           -- cmd = {...},
@@ -632,6 +633,7 @@ require('lazy').setup({
         'clang-format',
         'jq',
         'jsonnetfmt',
+        'markdownlint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -667,6 +669,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
+        markdown = { 'markdownlint', 'prettier' },
         python = { 'isort', 'black', 'flake8' },
         json = { 'fixjson', 'prettier', 'prettierd', 'fixjson', 'biome', 'clang-format', 'jq', 'jsonnetfmt' },
         ['_'] = { 'prettierd', 'prettier' },
