@@ -3,3 +3,6 @@
 [user]
 	email = Leo.Schlosser@Student.HTW-Berlin.de
 	name = Leo Schlosser
+[credential]
+	helper = cache --timeout 21600
+	helper = oauth
