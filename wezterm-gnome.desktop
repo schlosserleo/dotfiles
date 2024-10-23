@@ -1,1 +1,7 @@
-/usr/share/applications/wezterm-gnome.desktop
+[Desktop Entry]
+Name=StartupWezGnome
+GenericName=A script that runs at Gnome startup
+Comment=Runs the script in Exec path
+Exec=/home/leo/.config/wezterm/gnome.sh
+Terminal=false
+Type=Application
