@@ -6,18 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.java" },
-  { import = "astrocommunity.pack.cs" },
-  { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.pack.json" },
-  { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.fish" },
-  { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python-ruff" },
-  { import = "astrocommunity.pack.toml" },
-  { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.xml" },
-  { import = "astrocommunity.pack.hyprlang" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
   -- import/override with your plugins folder
 }

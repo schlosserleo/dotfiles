@@ -6,6 +6,8 @@ return {
 
   -- == Examples of Adding Plugins ==
 
+  "echasnovski/mini.icons",
+
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",

@@ -29,7 +29,8 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
+        scrolloff = 10,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -40,13 +41,13 @@ return {
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
-      -- first key is the mode
       i = {
-        ["<c-h>"] = { "<Left>" },
-        ["<C-j>"] = { "<Down>" },
-        ["<C-k>"] = { "<Up>" },
-        ["<C-l>"] = { "<Right>" },
+        ["<C-h>"] = { "<left>" },
+        ["<C-j>"] = { "<down>" },
+        ["<C-k>"] = { "<up>" },
+        ["<C-l>"] = { "<right>" },
       },
+      -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
 
