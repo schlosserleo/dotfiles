@@ -31,6 +31,7 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
         scrolloff = 10,
+        conceallevel = 1,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -63,6 +64,11 @@ return {
             )
           end,
           desc = "Close buffer from tabline",
+        },
+
+        ["<leader>j"] = {
+          function() require("obsidian").util.toggle_checkbox() end,
+          desc = "toggle checkbox",
         },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed

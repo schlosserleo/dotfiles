@@ -5,14 +5,35 @@
 return {
 
   -- == Examples of Adding Plugins ==
-
   "echasnovski/mini.icons",
 
   "andweeb/presence.nvim",
+
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
+  },
+
+  {
+    "epwalsh/obsidian.nvim",
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      -- Required.
+      "nvim-lua/plenary.nvim",
+    },
+    opts = function(_, opts)
+      opts = {
+        workspaces = {
+          {
+            name = "notes",
+            path = "~/Documents/notes/",
+          },
+        },
+      }
+      return opts
+    end,
   },
 
   -- == Examples of Overriding Plugins ==
