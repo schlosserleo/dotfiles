@@ -29,14 +29,16 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = true, -- sets vim.opt.wrap
+        conceallevel = 2,
         scrolloff = 10,
-        conceallevel = 1,
+        wrap = false, -- sets vim.opt.wrap
+        foldlevel = 99,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        -- python3_host_prog = vim.fn.expand "/usr/bin/python",
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -64,11 +66,6 @@ return {
             )
           end,
           desc = "Close buffer from tabline",
-        },
-
-        ["<leader>j"] = {
-          function() require("obsidian").util.toggle_checkbox() end,
-          desc = "toggle checkbox",
         },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
