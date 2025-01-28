@@ -4,9 +4,16 @@
 ---@type LazySpec
 return {
   {
-    "sphamba/smear-cursor.nvim",
+    "nvzone/typr",
+    dependencies = "nvzone/volt",
     opts = {},
+    cmd = { "Typr", "TyprStats" },
   },
+
+  -- {
+  --   "sphamba/smear-cursor.nvim",
+  --   opts = {},
+  -- },
 
   "let-def/texpresso.vim",
 

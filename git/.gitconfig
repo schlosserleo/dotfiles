@@ -9,3 +9,5 @@
 [core]
 	autocrlf = input
 	editor = nvim
+[pull]
+	rebase = true

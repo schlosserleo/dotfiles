@@ -17,6 +17,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.kotlin" },
