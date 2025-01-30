@@ -33,6 +33,7 @@ return {
         scrolloff = 10,
         wrap = false, -- sets vim.opt.wrap
         foldlevel = 99,
+        termguicolors = true,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

@@ -10,74 +10,12 @@ return {
     cmd = { "Typr", "TyprStats" },
   },
 
-  -- {
-  --   "sphamba/smear-cursor.nvim",
-  --   opts = {},
-  -- },
+  {
+    "sphamba/smear-cursor.nvim",
+    opts = {},
+  },
 
   "let-def/texpresso.vim",
-
-  {
-    "hrsh7th/nvim-cmp",
-    -- override the options table that is used in the `require("cmp").setup()` call
-    opts = function(_, opts)
-      -- opts parameter is the default options table
-      -- the function is lazy loaded so cmp is able to be required
-      local cmp = require "cmp"
-      -- modify the sources part of the options table
-      opts.sources = cmp.config.sources {
-        { name = "neorg", priority = 1250 },
-        { name = "nvim_lsp", priority = 1000 },
-        { name = "luasnip", priority = 750 },
-        { name = "buffer", priority = 500 },
-        { name = "path", priority = 250 },
-      }
-    end,
-  },
-
-  {
-    "vhyrro/luarocks.nvim",
-    priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
-    config = true,
-  },
-
-  "3rd/image.nvim",
-
-  {
-    "nvim-neorg/neorg",
-    lazy = false,
-    version = "*",
-    config = function()
-      require("neorg").setup {
-        load = {
-          ["core.defaults"] = {},
-          ["core.concealer"] = {},
-          ["core.autocommands"] = {},
-          ["core.highlights"] = {},
-          ["core.integrations.treesitter"] = {},
-          ["core.neorgcmd"] = {},
-          ["core.completion"] = {
-            config = {
-              engine = "nvim-cmp",
-            },
-          },
-          ["core.integrations.image"] = {},
-          ["core.latex.renderer"] = {},
-          ["core.dirman"] = {
-            config = {
-              workspaces = {
-                notes = "~/notes",
-              },
-              default_workspace = "notes",
-            },
-          },
-          ["core.dirman.utils"] = {},
-        },
-      }
-    end,
-  },
-
-  -- "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",

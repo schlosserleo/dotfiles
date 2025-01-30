@@ -1,5 +1,6 @@
+command = /bin/fish --login --interactive
 font-family = Maple Mono NF CN
-theme = catppuccin-mocha
+theme = carbonfox
 shell-integration = detect
 shell-integration-features = true
 gtk-titlebar = false
