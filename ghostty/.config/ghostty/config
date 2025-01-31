@@ -1,7 +1,10 @@
-command = /bin/fish --login --interactive
-font-family = Maple Mono NF CN
+command = /usr/bin/fish --login --interactive
+confirm-close-surface = false
+shell-integration-features = cursor,sudo,title
+clipboard-read = allow
+clipboard-write = allow
+window-theme = system
 theme = carbonfox
-shell-integration = detect
-shell-integration-features = true
+font-family = Maple Mono NF CN
 gtk-titlebar = false
 gtk-adwaita = false
