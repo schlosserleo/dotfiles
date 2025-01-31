@@ -13,4 +13,7 @@ return {
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.python-ruff" },
 }

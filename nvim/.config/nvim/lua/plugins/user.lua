@@ -24,27 +24,27 @@ return {
 
   "echasnovski/mini.icons",
 
-  {
-    "epwalsh/obsidian.nvim",
-    lazy = true,
-    ft = "markdown",
-    dependencies = {
-      -- Required.
-      "nvim-lua/plenary.nvim",
-    },
-    opts = function(_, opts)
-      opts = {
-        workspaces = {
-          {
-            name = "notes",
-            path = "~/Documents/notes/",
-          },
-        },
-      }
-      return opts
-    end,
-  },
-
+  -- {
+  --   "epwalsh/obsidian.nvim",
+  --   lazy = true,
+  --   ft = "markdown",
+  --   dependencies = {
+  --     -- Required.
+  --     "nvim-lua/plenary.nvim",
+  --   },
+  --   opts = function(_, opts)
+  --     opts = {
+  --       workspaces = {
+  --         {
+  --           name = "notes",
+  --           path = "~/Documents/notes/",
+  --         },
+  --       },
+  --     }
+  --     return opts
+  --   end,
+  -- },
+  --
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
