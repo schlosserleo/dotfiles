@@ -1,15 +1,16 @@
 [ActivityManager][Global Shortcuts]
 switch-to-activity-b7a02f5a-d5f7-49da-94b3-0cd5a2c392e9=
+switch-to-activity-f316143a-fe31-4a72-82d3-31f4e6c39c0f=
 
 [KDE Keyboard Layout Switcher][Global Shortcuts]
-Switch to Last-Used Keyboard Layout=Meta+Alt+L
+Switch to Last-Used Keyboard Layout=
 Switch to Next Keyboard Layout=Meta+Alt+K
 
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
 Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+PgUp; Ctrl+[
+Activate Previous Tab=Ctrl+[; Ctrl+PgUp
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
 Back=Back; Alt+Left
@@ -20,7 +21,7 @@ Clear=
 Close=Ctrl+W; Ctrl+Esc
 ConfigureNotifications=
 ConfigureToolbars=
-Copy=Ctrl+C; Ctrl+Ins
+Copy=Ctrl+Ins; Ctrl+C
 CreateFolder=Ctrl+Shift+N
 Cut=Ctrl+X; Shift+Del
 DeleteFile=Shift+Del
@@ -39,14 +40,14 @@ FindPrev=Shift+F3
 FitToHeight=
 FitToPage=
 FitToWidth=
-Forward=Forward; Alt+Right
+Forward=Alt+Right; Forward
 ForwardWord=Ctrl+Right
 FullScreen=Ctrl+Shift+F
 Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Home Page; Alt+Home
+Home=Alt+Home; Home Page
 KeyBindings=Ctrl+Alt+,
 Mail=
 MoveToTrash=Del
@@ -57,7 +58,7 @@ Open=Ctrl+O
 OpenContextMenu=Shift+F10; Menu
 OpenMainMenu=F10
 OpenRecent=
-Paste=Shift+Ins; Ctrl+V
+Paste=Ctrl+V; Shift+Ins
 Paste Selection=Ctrl+Shift+Ins
 Preferences=Ctrl+Shift+,
 PrevCompletion=Ctrl+Up
@@ -66,7 +67,7 @@ PrintPreview=
 Prior=PgUp
 Quit=Ctrl+Q
 Redo=Ctrl+Shift+Z
-Reload=Refresh; F5
+Reload=F5; Refresh
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -88,7 +89,7 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl++; Ctrl+=
+ZoomIn=Ctrl+=; Ctrl++
 ZoomOut=Ctrl+-
 
 [com.mitchellh.ghostty.desktop][Global Shortcuts]
@@ -130,7 +131,7 @@ Cycle Overview Opposite=
 Decrease Opacity=
 Edit Tiles=Meta+T
 Expose=Ctrl+F9
-ExposeAll=Launch (C); Ctrl+F10
+ExposeAll=Ctrl+F10; Launch (C)
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 Grid View=Meta+G
@@ -149,12 +150,12 @@ Show Desktop=
 Switch One Desktop Down=Meta+Ctrl+Down
 Switch One Desktop Up=Meta+Ctrl+Up
 Switch One Desktop to the Left=Meta+Ctrl+Left
-Switch One Desktop to the Right=Meta+Ctrl+Right
-Switch Window Down=Meta+Alt+Down; Meta+J
+Switch One Desktop to the Right=Meta+Alt+L; Meta+Ctrl+Right
+Switch Window Down=Meta+J; Meta+Alt+Down
 Switch Window Left=Meta+Alt+Left; Meta+H
-Switch Window Right=Meta+Alt+Right; Meta+L
+Switch Window Right=Meta+L; Meta+Alt+Right
 Switch Window Up=Meta+K; Meta+Alt+Up
-Switch to Desktop 1=Ctrl+F1; Meta+1
+Switch to Desktop 1=Meta+1; Ctrl+F1
 Switch to Desktop 10=
 Switch to Desktop 11=
 Switch to Desktop 12=
@@ -165,9 +166,9 @@ Switch to Desktop 16=
 Switch to Desktop 17=
 Switch to Desktop 18=
 Switch to Desktop 19=
-Switch to Desktop 2=Ctrl+F2; Meta+2
+Switch to Desktop 2=Meta+2; Ctrl+F2
 Switch to Desktop 20=
-Switch to Desktop 3=Meta+3; Ctrl+F3
+Switch to Desktop 3=Ctrl+F3; Meta+3
 Switch to Desktop 4=Meta+4; Ctrl+F4
 Switch to Desktop 5=Meta+5
 Switch to Desktop 6=
@@ -176,7 +177,7 @@ Switch to Desktop 8=
 Switch to Desktop 9=
 Switch to Next Desktop=Meta+Tab
 Switch to Next Screen=
-Switch to Previous Desktop=Meta+Shift+Tab
+Switch to Previous Desktop=Meta+Shift+Tab; Meta+Alt+H
 Switch to Previous Screen=
 Switch to Screen 0=
 Switch to Screen 1=
@@ -228,7 +229,7 @@ Window Pack Down=
 Window Pack Left=
 Window Pack Right=
 Window Pack Up=
-Window Quick Tile Bottom=Meta+Down; Meta+Shift+J
+Window Quick Tile Bottom=Meta+Shift+J; Meta+Down
 Window Quick Tile Bottom Left=
 Window Quick Tile Bottom Right=
 Window Quick Tile Left=Meta+Shift+H; Meta+Left
@@ -290,6 +291,9 @@ stopmedia=Media Stop
 [org.kde.dolphin.desktop][Global Shortcuts]
 _launch=Meta+E
 
+[org.kde.kcalc.desktop][Global Shortcuts]
+_launch=Calculator
+
 [org.kde.konsole.desktop][Global Shortcuts]
 NewTab=
 NewWindow=
@@ -300,13 +304,25 @@ RunClipboard=Alt+Shift+F2
 _launch=Search; Alt+F2; Alt+Space; Meta+D
 
 [org.kde.kscreen.desktop][Global Shortcuts]
-ShowOSD=Display; Meta+P
+ShowOSD=Meta+P; Display
 
 [org.kde.plasma-systemmonitor.desktop][Global Shortcuts]
 _launch=Meta+Esc
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
-_launch=Meta+Ctrl+Alt+Shift+Space; Meta+.
+_launch=Meta+.; Meta+Ctrl+Alt+Shift+Space
+
+[org.kde.spectacle.desktop][Global Shortcuts]
+ActiveWindowScreenShot=Meta+Print
+CurrentMonitorScreenShot=
+FullScreenScreenShot=Shift+Print
+OpenWithoutScreenshot=
+RecordRegion=Meta+Shift+R; Meta+R
+RecordScreen=Meta+Alt+R
+RecordWindow=
+RectangularRegionScreenShot=Meta+Shift+S
+WindowUnderCursorScreenShot=Meta+Ctrl+Print
+_launch=Print
 
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
@@ -321,7 +337,7 @@ PowerOff=Power Off
 Sleep=Sleep
 Toggle Keyboard Backlight=Keyboard Light On/Off
 Turn Off Screen=
-powerProfile=Meta+B; Battery
+powerProfile=Battery; Meta+B
 
 [plasmashell][Global Shortcuts]
 activate application launcher=Alt+F1; Meta
