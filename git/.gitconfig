@@ -1,13 +1,15 @@
 [init]
 	defaultBranch = main
 [user]
-	email = Leo.Schlosser@Student.HTW-Berlin.de
+	email = leoschlosser@tutamail.com
 	name = Leo Schlosser
-[credential]
-	helper = cache --timeout 21600
-	helper = oauth
+	signingkey = F7155193AF248B6A
 [core]
 	autocrlf = input
 	editor = nvim
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
