@@ -13,14 +13,27 @@ return {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = true, -- enable autopairs at start
       cmp = true, -- enable completion at start
-      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      diagnostics = { virtual_text = false, virtual_lines = false }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
-      virtual_text = false,
+      virtual_text = true,
       underline = true,
+    },
+    -- passed to `vim.filetype.add`
+    filetypes = {
+      -- see `:h vim.filetype.add` for usage
+      extension = {
+        foo = "fooscript",
+      },
+      filename = {
+        [".foorc"] = "fooscript",
+      },
+      pattern = {
+        [".*/etc/foo/.*"] = "fooscript",
+      },
     },
     -- vim options can be configured here
     options = {
@@ -29,28 +42,17 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        conceallevel = 2,
-        scrolloff = 10,
         wrap = false, -- sets vim.opt.wrap
-        foldlevel = 99,
-        termguicolors = true,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
-        -- python3_host_prog = vim.fn.expand "/usr/bin/python",
       },
     },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
-      i = {
-        ["<C-h>"] = { "<left>" },
-        ["<C-j>"] = { "<down>" },
-        ["<C-k>"] = { "<up>" },
-        ["<C-l>"] = { "<right>" },
-      },
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
@@ -68,13 +70,11 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
-
-        -- tables with just a `desc` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
-        -- ["<Leader>b"] = { desc = "Buffers" },
-
-        -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
+        ["<C-x>"] = { "<cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
+      },
+      t = {
+        -- Add the mapping for toggling terminal with <C-j> in terminal mode
+        ["<C-x>"] = { "<C-\\><C-n><cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
       },
     },
   },
